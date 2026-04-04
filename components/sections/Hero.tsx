@@ -2,7 +2,7 @@
 
 import * as React from "react";
 import { motion, useScroll, useTransform } from "framer-motion";
-import { ArrowDown } from "lucide-react";
+import { ArrowDown, MessageCircle } from "lucide-react";
 import { Button } from "@/components/ui/Button";
 import { heroContent } from "@/lib/constants";
 
@@ -18,7 +18,7 @@ export function Hero() {
   const y = useTransform(scrollYProgress, [0, 0.3], [0, 30]);
 
   const handleScrollToServices = () => {
-    document.querySelector("#services")?.scrollIntoView({ behavior: "smooth" });
+    document.querySelector("#contact")?.scrollIntoView({ behavior: "smooth" });
   };
 
   return (
@@ -58,13 +58,23 @@ export function Hero() {
 
       <div className="relative z-10 mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 text-center">
         <motion.div style={{ y }}>
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ delay: 0.3, duration: 0.8 }}
+            className="mb-4 inline-flex items-center gap-2 rounded-full border border-primary/30 bg-primary/10 px-4 py-1.5 text-sm font-medium text-primary"
+          >
+            <span className="h-2 w-2 animate-pulse rounded-full bg-green-500" />
+            Available for Projects
+          </motion.div>
+
           <motion.p
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ delay: 0.3, duration: 0.8 }}
-            className="mb-4 text-sm font-medium text-primary"
+            className="mb-2 text-sm font-medium text-muted-foreground"
           >
-            Full-Stack Developer
+            Karachi, Pakistan
           </motion.p>
 
           <motion.h1
@@ -73,18 +83,8 @@ export function Hero() {
             transition={{ delay: 0.4, duration: 0.8 }}
             className="text-4xl font-bold tracking-tight sm:text-5xl md:text-6xl lg:text-7xl"
           >
-            {heroContent.headline.split(" ").map((word, index) => (
-              <span
-                key={index}
-                className={
-                  index === 2 || index === 3
-                    ? "gradient-text"
-                    : ""
-                }
-              >
-                {word}{" "}
-              </span>
-            ))}
+            Abdur Rehman{" "}
+            <span className="gradient-text">Building the Future via Intent</span>
           </motion.h1>
 
           <motion.p
@@ -93,7 +93,8 @@ export function Hero() {
             transition={{ delay: 0.6, duration: 0.8 }}
             className="mx-auto mt-6 max-w-2xl text-lg text-muted-foreground"
           >
-            {heroContent.tagline}
+            Karachi-based <span className="text-primary font-medium">Frontend Developer</span> specializing in{" "}
+            <span className="text-primary font-medium">Vibe Coding</span> and AI-Native Workflows
           </motion.p>
 
           <motion.div
@@ -111,8 +112,17 @@ export function Hero() {
               className="w-full sm:w-auto"
               onClick={() => document.querySelector("#projects")?.scrollIntoView({ behavior: "smooth" })}
             >
-              View Projects
+              View My Work
             </Button>
+            <a
+              href={`https://wa.me/${heroContent.whatsappNumber}`}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 rounded-lg bg-[#25D366] px-6 py-3 font-semibold text-white transition-all hover:bg-[#20BD5A] hover:shadow-lg hover:shadow-[#25D366]/30"
+            >
+              <MessageCircle size={20} />
+              WhatsApp
+            </a>
           </motion.div>
         </motion.div>
       </div>

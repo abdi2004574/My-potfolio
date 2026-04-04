@@ -173,10 +173,11 @@ export const stats = [
 ];
 
 export const heroContent = {
-  headline: "Combining human intent with AI intelligence to build platforms like Account Verse and Orion.ai in record time. Why wait weeks when we can launch in days?",
-  tagline: "Vibe Coder | Orchestrating AI to Build High-Performance Digital Products",
-  ctaText: "View My Services",
-  ctaHref: "#services",
+  headline: "Abdur Rehman - Building the Future via Intent",
+  tagline: "Karachi-based Frontend Developer specializing in Vibe Coding and AI-Native Workflows",
+  ctaText: "Start a Project",
+  ctaHref: "#contact",
+  whatsappNumber: "923368243824",
 };
 
 export const projectTypes = [
