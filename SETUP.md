@@ -51,3 +51,16 @@ Edit `lib/constants.ts` to add your own:
 
 ### Port 3000 in use
 - Change port in command: `npm run dev -- -p 3001`
+
+## Vercel Deployment
+
+This project is optimized for deployment on [Vercel](https://vercel.com).
+
+1. Push your code to a GitHub repository.
+2. Connect your GitHub account to Vercel.
+3. Import your repository.
+4. Vercel will automatically detect the Next.js settings.
+5. If the build fails due to dependency conflicts, ensure the `.npmrc` file is present in your root directory.
+6. For **Static Export** (`output: 'export'`):
+   - Build Command: `npm run build`
+   - Output Directory: `out`

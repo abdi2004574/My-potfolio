@@ -40,11 +40,11 @@ export function ProjectShowcase() {
                 viewport={{ once: true }}
                 transition={{ duration: 0.6 }}
               >
-                <div className="flex-1 relative">
-                  <div className="relative aspect-video overflow-hidden rounded-xl bg-secondary border border-border group">
-                    <div className="absolute inset-0 bg-gradient-to-br from-primary/20 to-accent/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                <div className="flex-1 relative group">
+                  <div className="relative aspect-video sm:aspect-[16/9] lg:aspect-video overflow-hidden rounded-xl bg-secondary border border-border group-hover:border-primary/50 transition-colors">
+                    <div className="absolute inset-0 bg-gradient-to-br from-primary/20 to-accent/20 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
                     <div className="absolute inset-0 flex items-center justify-center">
-                      <span className="text-6xl font-bold text-white/10">
+                      <span className="text-4xl sm:text-6xl font-bold text-white/5 group-hover:text-white/10 transition-all duration-500 group-hover:scale-110">
                         {project.name.charAt(0)}
                       </span>
                     </div>

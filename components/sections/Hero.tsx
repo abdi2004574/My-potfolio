@@ -31,13 +31,13 @@ export function Hero() {
 
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
         <motion.div
-          className="absolute top-1/4 left-1/4 text-6xl font-bold text-primary/10"
+          className="absolute top-1/4 left-10 text-4xl sm:text-6xl font-bold text-primary/10"
           style={{ opacity }}
         >
           {"< />"}
         </motion.div>
         <motion.div
-          className="absolute bottom-1/4 right-1/4 text-4xl font-bold text-accent/10"
+          className="absolute bottom-1/4 right-10 text-2xl sm:text-4xl font-bold text-accent/10"
           style={{
             opacity: useTransform(scrollYProgress, [0.1, 0.4], [0.5, 0]),
             x: useTransform(scrollYProgress, [0, 0.3], [30, 0]),
@@ -46,7 +46,7 @@ export function Hero() {
           {"{ }"}
         </motion.div>
         <motion.div
-          className="absolute top-1/2 right-1/3 text-5xl font-bold text-secondary/20"
+          className="absolute top-1/3 right-10 text-3xl sm:text-5xl font-bold text-secondary/20"
           style={{
             opacity: useTransform(scrollYProgress, [0.05, 0.35], [0.8, 0]),
             y: useTransform(scrollYProgress, [0, 0.3], [-20, 0]),
@@ -100,14 +100,15 @@ export function Hero() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.8, duration: 0.8 }}
-            className="mt-10 flex flex-col sm:flex-row gap-4 justify-center"
+            className="mt-10 flex flex-col sm:flex-row gap-4 justify-center items-center px-4"
           >
-            <Button size="xl" onClick={handleScrollToServices}>
+            <Button size="xl" className="w-full sm:w-auto" onClick={handleScrollToServices}>
               {heroContent.ctaText}
             </Button>
             <Button
               size="xl"
               variant="outline"
+              className="w-full sm:w-auto"
               onClick={() => document.querySelector("#projects")?.scrollIntoView({ behavior: "smooth" })}
             >
               View Projects

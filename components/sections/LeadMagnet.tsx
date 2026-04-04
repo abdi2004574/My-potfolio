@@ -112,7 +112,7 @@ export function LeadMagnet() {
         </ScrollReveal>
 
         <ScrollReveal delay={0.2}>
-          <div className="rounded-2xl border border-border bg-card p-8">
+          <div className="rounded-2xl border border-border bg-card p-4 sm:p-8 shadow-sm">
             <ProgressBar currentStep={currentStep} totalSteps={steps.length} />
 
             <form onSubmit={handleSubmit(onSubmit)} className="mt-8">
@@ -227,6 +227,7 @@ export function LeadMagnet() {
                           error={!!errors.name}
                           icon={<User size={18} />}
                           placeholder="Your name"
+                          className="text-base sm:text-sm" // 16px minimum on mobile
                         />
                         {errors.name && (
                           <p className="mt-1 text-sm text-red-500">
@@ -244,6 +245,7 @@ export function LeadMagnet() {
                           error={!!errors.email}
                           icon={<Mail size={18} />}
                           placeholder="your@email.com"
+                          className="text-base sm:text-sm"
                         />
                         {errors.email && (
                           <p className="mt-1 text-sm text-red-500">
@@ -259,6 +261,7 @@ export function LeadMagnet() {
                           {...register("phone")}
                           icon={<Phone size={18} />}
                           placeholder="+1 (555) 000-0000"
+                          className="text-base sm:text-sm"
                         />
                       </div>
                       <div>
@@ -268,6 +271,7 @@ export function LeadMagnet() {
                         <Textarea
                           {...register("message")}
                           placeholder="Tell me about your project..."
+                          className="text-base sm:text-sm min-h-[150px]"
                         />
                       </div>
                     </div>

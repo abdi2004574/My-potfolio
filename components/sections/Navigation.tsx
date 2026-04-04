@@ -88,32 +88,49 @@ export function Navigation() {
       <AnimatePresence>
         {isOpen && (
           <motion.div
-            className="md:hidden bg-background/95 backdrop-blur-lg border-b border-border"
-            initial={{ opacity: 0, height: 0 }}
-            animate={{ opacity: 1, height: "auto" }}
-            exit={{ opacity: 0, height: 0 }}
-            transition={{ duration: 0.3 }}
+            className="md:hidden fixed inset-x-0 top-16 bg-background/95 backdrop-blur-xl border-b border-border shadow-2xl h-[calc(100vh-4rem)] overflow-y-auto"
+            initial={{ opacity: 0, x: "100%" }}
+            animate={{ opacity: 1, x: 0 }}
+            exit={{ opacity: 0, x: "100%" }}
+            transition={{ type: "spring", damping: 25, stiffness: 200 }}
           >
-            <div className="space-y-1 px-4 py-4">
-              {navLinks.map((link) => (
-                <a
+            <div className="flex flex-col h-full px-6 py-8 space-y-6">
+              {navLinks.map((link, index) => (
+                <motion.a
                   key={link.href}
                   href={link.href}
+                  initial={{ opacity: 0, x: 20 }}
+                  animate={{ opacity: 1, x: 0 }}
+                  transition={{ delay: index * 0.1 }}
                   onClick={(e) => handleNavClick(e, link.href)}
-                  className="block py-2 text-base font-medium text-muted-foreground hover:text-foreground"
+                  className="text-2xl font-bold text-muted-foreground hover:text-primary transition-colors flex items-center justify-between group"
                 >
                   {link.label}
-                </a>
+                  <motion.span
+                    initial={{ scale: 0 }}
+                    animate={{ scale: 1 }}
+                    className="h-1.5 w-1.5 rounded-full bg-primary opacity-0 group-hover:opacity-100 transition-opacity"
+                  />
+                </motion.a>
               ))}
-              <Button
-                className="w-full mt-4"
-                onClick={() => {
-                  setIsOpen(false);
-                  document.querySelector("#contact")?.scrollIntoView({ behavior: "smooth" });
-                }}
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ delay: 0.4 }}
+                className="pt-8 mt-auto border-t border-border"
               >
-                Let&apos;s Talk
-              </Button>
+                <p className="text-sm text-muted-foreground mb-4">Ready to start a project?</p>
+                <Button
+                  size="xl"
+                  className="w-full text-lg shadow-xl shadow-primary/20"
+                  onClick={() => {
+                    setIsOpen(false);
+                    document.querySelector("#contact")?.scrollIntoView({ behavior: "smooth" });
+                  }}
+                >
+                  Let&apos;s Build Something
+                </Button>
+              </motion.div>
             </div>
           </motion.div>
         )}

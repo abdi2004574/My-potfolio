@@ -75,40 +75,76 @@ export const services = [
   },
 ];
 
-// TODO: Add your actual project data here
 export const projects = [
   {
-    id: "project-1",
-    name: "Project Name",
-    description: "Brief description of what the project does.",
-    challenge: "What was the main challenge or problem?",
-    solution: "How did you solve it? What was your approach?",
-    techStack: ["React", "Node.js", "MongoDB"],
-    imageUrl: "/images/project-1.webp",
-    liveUrl: "https://project-live-url.com",
-    demoUrl: "#",
+    id: "account-verse",
+    name: "Account Verse",
+    description:
+      "A comprehensive financial management platform designed for modern businesses. It features real-time transaction tracking, automated invoicing, and a clean command center for account balancing.",
+    challenge:
+      "Building an intuitive financial dashboard that could handle complex data visualization while maintaining performance and clarity for non-technical users.",
+    solution:
+      "Implemented interactive data visualization with real-time cash flow trends using React and Shadcn UI components, creating a seamless user experience.",
+    techStack: ["React", "Tailwind CSS", "Lucide Icons", "Shadcn UI"],
+    imageUrl: "/images/account-verse.webp",
+    liveUrl: "https://account-verse.demo",
+    demoUrl: "https://github.com/abdi2004574/account-verse",
   },
   {
-    id: "project-2",
-    name: "Project Name",
-    description: "Brief description of what the project does.",
-    challenge: "What was the main challenge or problem?",
-    solution: "How did you solve it? What was your approach?",
-    techStack: ["Laravel", "Vue.js", "MySQL"],
-    imageUrl: "/images/project-2.webp",
-    liveUrl: "https://project-live-url.com",
-    demoUrl: "#",
+    id: "mind-bridge",
+    name: "Mind Bridge",
+    description:
+      "An empathetic AI-driven platform that acts as a bridge between users and mental wellness resources. It includes a Mood Journal and an AI chatbot designed for supportive, low-friction conversation.",
+    challenge:
+      "Creating a calming, safe environment that adapts to user emotions while integrating OpenAI for meaningful interactions.",
+    solution:
+      "Built a vibe-based UI that dynamically changes color themes based on user's reported mood, with smooth Framer Motion animations for a soothing experience.",
+    techStack: ["Next.js", "Framer Motion", "OpenAI API"],
+    imageUrl: "/images/mind-bridge.webp",
+    liveUrl: "https://mind-bridge.demo",
+    demoUrl: "https://github.com/abdi2004574/mind-bridge",
   },
   {
-    id: "project-3",
-    name: "Project Name",
-    description: "Brief description of what the project does.",
-    challenge: "What was the main challenge or problem?",
-    solution: "How did you solve it? What was your approach?",
-    techStack: ["React", "Express", "MongoDB", "AWS"],
-    imageUrl: "/images/project-3.webp",
-    liveUrl: "https://project-live-url.com",
-    demoUrl: "#",
+    id: "sultan-ai",
+    name: "Sultan.ai",
+    description:
+      "A high-end, Gold & Obsidian themed landing page for a luxury AI consulting agency. Designed to look expensive and premium, focusing on high-ticket client acquisition.",
+    challenge:
+      "Creating a luxurious, premium aesthetic that appeals to high-value clients while ensuring the design feels exclusive and sophisticated.",
+    solution:
+      "Developed custom CSS glassmorphism effects with scroll-triggered 3D-effect cards showcasing AI service tiers.",
+    techStack: ["React", "Vite", "Custom CSS", "Glassmorphism"],
+    imageUrl: "/images/sultan-ai.webp",
+    liveUrl: "https://sultan-ai.demo",
+    demoUrl: "https://github.com/abdi2004574/sultan-ai",
+  },
+  {
+    id: "orion-ai",
+    name: "Orion.ai",
+    description:
+      "A B2B SaaS platform that automates repetitive workflows. Built for teams who need set-it-and-forget-it solutions for data entry and lead scraping.",
+    challenge:
+      "Designing an intuitive workflow builder interface that allows non-technical users to create complex automation sequences.",
+    solution:
+      "Created a drag-and-drop workflow builder prototype with Supabase backend for seamless data management and automation.",
+    techStack: ["React", "Tailwind", "Supabase"],
+    imageUrl: "/images/orion-ai.webp",
+    liveUrl: "https://orion-ai.demo",
+    demoUrl: "https://github.com/abdi2004574/orion-ai",
+  },
+  {
+    id: "lovedone-phycare",
+    name: "Lovedone_Phycare",
+    description:
+      "A patient-first healthcare portal designed for families to track the physical therapy progress of their loved ones. It simplifies medical jargon into easy-to-read progress bars.",
+    challenge:
+      "Making complex medical data accessible and understandable for families while ensuring secure, real-time updates.",
+    solution:
+      "Built a secure login system with progress snapshots enabling remote family monitoring, using Firebase for real-time updates.",
+    techStack: ["React", "Tailwind CSS", "Firebase"],
+    imageUrl: "/images/lovedone-phycare.webp",
+    liveUrl: "https://lovedone-phycare.demo",
+    demoUrl: "https://github.com/abdi2004574/lovedone-phycare",
   },
 ];
 
@@ -136,10 +172,9 @@ export const stats = [
   },
 ];
 
-// Update hero content - this appears at the top of the page
 export const heroContent = {
-  headline: "Engineering Digital Growth Through Code",
-  tagline: "Full-Stack Developer | MERN & Laravel Specialist",
+  headline: "Combining human intent with AI intelligence to build platforms like Account Verse and Orion.ai in record time. Why wait weeks when we can launch in days?",
+  tagline: "Vibe Coder | Orchestrating AI to Build High-Performance Digital Products",
   ctaText: "View My Services",
   ctaHref: "#services",
 };
