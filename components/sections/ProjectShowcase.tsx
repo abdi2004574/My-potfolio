@@ -17,6 +17,9 @@ export function ProjectShowcase() {
           viewport={{ once: true }}
           transition={{ duration: 0.5 }}
         >
+          <p className="text-sm font-semibold uppercase tracking-widest text-primary mb-3">
+            Portfolio
+          </p>
           <h2 className="text-3xl font-bold tracking-tight sm:text-4xl">
             Featured Projects
           </h2>
@@ -40,32 +43,52 @@ export function ProjectShowcase() {
                 viewport={{ once: true }}
                 transition={{ duration: 0.6 }}
               >
+                {/* Project Image */}
                 <div className="flex-1 relative group">
-                  <div className="relative aspect-video sm:aspect-[16/9] lg:aspect-video overflow-hidden rounded-xl bg-secondary border border-border group-hover:border-primary/50 transition-colors">
-                    <div className="absolute inset-0 bg-gradient-to-br from-primary/20 to-accent/20 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
-                    <div className="absolute inset-0 flex items-center justify-center">
-                      <span className="text-4xl sm:text-6xl font-bold text-white/5 group-hover:text-white/10 transition-all duration-500 group-hover:scale-110">
-                        {project.name.charAt(0)}
-                      </span>
+                  <div className="relative aspect-video overflow-hidden rounded-xl border border-border group-hover:border-primary/50 transition-all duration-500 shadow-lg group-hover:shadow-xl group-hover:shadow-primary/10">
+                    {/* Actual project screenshot */}
+                    <img
+                      src={project.imageUrl}
+                      alt={`${project.name} - Project Screenshot`}
+                      className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                      loading="lazy"
+                    />
+                    {/* Hover overlay */}
+                    <div className="absolute inset-0 bg-gradient-to-t from-background/80 via-background/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex items-end justify-center pb-6">
+                      <div className="flex gap-3">
+                        <a href={project.liveUrl} target="_blank" rel="noopener noreferrer">
+                          <Button size="sm" className="shadow-lg">
+                            <ExternalLink size={14} className="mr-2" />
+                            Live Demo
+                          </Button>
+                        </a>
+                        <a href={project.codeUrl} target="_blank" rel="noopener noreferrer">
+                          <Button size="sm" variant="secondary" className="shadow-lg">
+                            <Github size={14} className="mr-2" />
+                            Code
+                          </Button>
+                        </a>
+                      </div>
                     </div>
                   </div>
                 </div>
 
+                {/* Project Info */}
                 <div className="flex-1 space-y-4">
                   <h3 className="text-2xl font-bold">{project.name}</h3>
-                  <p className="text-muted-foreground">{project.description}</p>
+                  <p className="text-muted-foreground leading-relaxed">{project.description}</p>
 
-                  <div className="space-y-2">
-                    <div>
-                      <h4 className="text-sm font-semibold text-foreground">
+                  <div className="space-y-3 py-2">
+                    <div className="rounded-lg bg-primary/5 border border-primary/10 p-3">
+                      <h4 className="text-sm font-semibold text-primary mb-1">
                         Challenge
                       </h4>
                       <p className="text-sm text-muted-foreground">
                         {project.challenge}
                       </p>
                     </div>
-                    <div>
-                      <h4 className="text-sm font-semibold text-foreground">
+                    <div className="rounded-lg bg-accent/5 border border-accent/10 p-3">
+                      <h4 className="text-sm font-semibold text-accent mb-1">
                         Solution
                       </h4>
                       <p className="text-sm text-muted-foreground">
@@ -78,7 +101,7 @@ export function ProjectShowcase() {
                     {project.techStack.map((tech) => (
                       <span
                         key={tech}
-                        className="inline-flex items-center rounded-full bg-secondary px-3 py-1 text-xs font-medium"
+                        className="inline-flex items-center rounded-full bg-secondary px-3 py-1 text-xs font-medium border border-border"
                       >
                         {tech}
                       </span>
@@ -86,14 +109,18 @@ export function ProjectShowcase() {
                   </div>
 
                   <div className="flex gap-4 pt-2">
-                    <Button variant="outline" size="sm">
-                      <ExternalLink size={16} className="mr-2" />
-                      Live Demo
-                    </Button>
-                    <Button variant="ghost" size="sm">
-                      <Github size={16} className="mr-2" />
-                      Code
-                    </Button>
+                    <a href={project.liveUrl} target="_blank" rel="noopener noreferrer">
+                      <Button variant="outline" size="sm">
+                        <ExternalLink size={16} className="mr-2" />
+                        Live Demo
+                      </Button>
+                    </a>
+                    <a href={project.codeUrl} target="_blank" rel="noopener noreferrer">
+                      <Button variant="ghost" size="sm">
+                        <Github size={16} className="mr-2" />
+                        Code
+                      </Button>
+                    </a>
                   </div>
                 </div>
               </motion.div>
@@ -107,10 +134,12 @@ export function ProjectShowcase() {
           whileInView={{ opacity: 1 }}
           viewport={{ once: true }}
         >
-          <Button size="lg">
-            View All Projects
-            <ArrowRight size={16} className="ml-2" />
-          </Button>
+          <a href="https://github.com/abdi2004574" target="_blank" rel="noopener noreferrer">
+            <Button size="lg">
+              View All Projects
+              <ArrowRight size={16} className="ml-2" />
+            </Button>
+          </a>
         </motion.div>
       </div>
     </section>

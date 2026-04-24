@@ -7,41 +7,39 @@ import {
   Award,
   Users,
   CheckCircle,
-  ArrowUpRight,
+  Rocket,
+  Brain,
   Github,
   Linkedin,
-  Twitter,
   Mail,
-  ExternalLink,
 } from "lucide-react";
 
-// TODO: Update with Abdur Rehman's actual information
 export const services = [
   {
-    id: "fullstack",
-    title: "Full-Stack Development",
+    id: "frontend",
+    title: "Modern Frontend Development",
     description:
-      "End-to-end web application development using modern technologies like MERN Stack and Laravel. I build scalable, secure, and performant applications tailored to your business needs.",
+      "Building highly interactive, responsive, and accessible web interfaces using React and Next.js, tailored for an exceptional user experience.",
     icon: Code2,
     features: [
-      "React/Next.js Frontend",
-      "Node.js/Laravel Backend",
-      "RESTful & GraphQL APIs",
-      "Database Design & Optimization",
+      "React & Next.js Development",
+      "Tailwind CSS & Framer Motion",
+      "Responsive & Mobile-First",
+      "Interactive UIs & Animations",
     ],
     link: "#services",
   },
   {
-    id: "backend",
-    title: "Backend Architecture",
+    id: "webapp",
+    title: "Web App & BaaS Architecture",
     description:
-      "Scalable server-side solutions designed for performance and reliability. From API design to database optimization, I build robust backend systems.",
+      "Creating functional, scalable applications using modern Backend-as-a-Service solutions like Supabase and Firebase, alongside AI capabilities.",
     icon: Server,
     features: [
-      "API Architecture",
-      "Database Design",
-      "Authentication & Security",
-      "Cloud Deployment",
+      "Supabase & Firebase Integration",
+      "OpenAI & AI Integrations",
+      "Robust State Management",
+      "Dynamic Data Handling",
     ],
     link: "#services",
   },
@@ -86,9 +84,9 @@ export const projects = [
     solution:
       "Implemented interactive data visualization with real-time cash flow trends using React and Shadcn UI components, creating a seamless user experience.",
     techStack: ["React", "Tailwind CSS", "Lucide Icons", "Shadcn UI"],
-    imageUrl: "/images/account-verse.webp",
+    imageUrl: "/images/account-verse.png",
     liveUrl: "https://account-verse.demo",
-    demoUrl: "https://github.com/abdi2004574/account-verse",
+    codeUrl: "https://github.com/abdi2004574/account-verse",
   },
   {
     id: "mind-bridge",
@@ -100,9 +98,9 @@ export const projects = [
     solution:
       "Built a vibe-based UI that dynamically changes color themes based on user's reported mood, with smooth Framer Motion animations for a soothing experience.",
     techStack: ["Next.js", "Framer Motion", "OpenAI API"],
-    imageUrl: "/images/mind-bridge.webp",
+    imageUrl: "/images/mind-bridge.png",
     liveUrl: "https://mind-bridge.demo",
-    demoUrl: "https://github.com/abdi2004574/mind-bridge",
+    codeUrl: "https://github.com/abdi2004574/mind-bridge",
   },
   {
     id: "sultan-ai",
@@ -114,9 +112,9 @@ export const projects = [
     solution:
       "Developed custom CSS glassmorphism effects with scroll-triggered 3D-effect cards showcasing AI service tiers.",
     techStack: ["React", "Vite", "Custom CSS", "Glassmorphism"],
-    imageUrl: "/images/sultan-ai.webp",
+    imageUrl: "/images/sultan-ai.png",
     liveUrl: "https://sultan-ai.demo",
-    demoUrl: "https://github.com/abdi2004574/sultan-ai",
+    codeUrl: "https://github.com/abdi2004574/sultan-ai",
   },
   {
     id: "orion-ai",
@@ -128,13 +126,13 @@ export const projects = [
     solution:
       "Created a drag-and-drop workflow builder prototype with Supabase backend for seamless data management and automation.",
     techStack: ["React", "Tailwind", "Supabase"],
-    imageUrl: "/images/orion-ai.webp",
+    imageUrl: "/images/orion-ai.png",
     liveUrl: "https://orion-ai.demo",
-    demoUrl: "https://github.com/abdi2004574/orion-ai",
+    codeUrl: "https://github.com/abdi2004574/orion-ai",
   },
   {
     id: "lovedone-phycare",
-    name: "Lovedone_Phycare",
+    name: "Lovedone Phycare",
     description:
       "A patient-first healthcare portal designed for families to track the physical therapy progress of their loved ones. It simplifies medical jargon into easy-to-read progress bars.",
     challenge:
@@ -142,33 +140,32 @@ export const projects = [
     solution:
       "Built a secure login system with progress snapshots enabling remote family monitoring, using Firebase for real-time updates.",
     techStack: ["React", "Tailwind CSS", "Firebase"],
-    imageUrl: "/images/lovedone-phycare.webp",
+    imageUrl: "/images/lovedone-phycare.png",
     liveUrl: "https://lovedone-phycare.demo",
-    demoUrl: "https://github.com/abdi2004574/lovedone-phycare",
+    codeUrl: "https://github.com/abdi2004574/lovedone-phycare",
   },
 ];
 
-// Update these stats with actual numbers
 export const stats = [
   {
-    icon: Briefcase,
-    value: "3+",
-    label: "Years of Experience",
+    icon: Rocket,
+    value: "5+",
+    label: "Projects Shipped",
+  },
+  {
+    icon: Brain,
+    value: "AI-Native",
+    label: "Development Workflow",
   },
   {
     icon: Award,
-    value: "16+",
-    label: "Projects Delivered",
-  },
-  {
-    icon: Users,
-    value: "100%",
-    label: "Client Satisfaction",
+    value: "10+",
+    label: "Technologies Mastered",
   },
   {
     icon: CheckCircle,
-    value: "50+",
-    label: "Happy Clients",
+    value: "100%",
+    label: "Committed to Quality",
   },
 ];
 
@@ -178,6 +175,47 @@ export const heroContent = {
   ctaText: "Start a Project",
   ctaHref: "#contact",
   whatsappNumber: "923368243824",
+};
+
+export const aboutContent = {
+  greeting: "Hey, I'm Abdur Rehman 👋",
+  bio: "A first-year Computer Engineering student from Karachi, Pakistan, who doesn't wait for the classroom to start building. I ship real products using AI-native workflows and modern web technologies — turning ideas into production-ready applications at the speed of thought.",
+  highlights: [
+    "First-year CE student building production-level apps",
+    "Specializing in React, Next.js & AI-powered development",
+    "Focused on solving real problems for real users",
+    "Passionate about clean code and beautiful interfaces",
+  ],
+  traits: ["Builder", "Problem Solver", "AI-Native", "Self-Taught", "Fast Learner", "Detail Oriented"],
+};
+
+export const techStack = {
+  frontend: [
+    { name: "React", icon: "react" },
+    { name: "Next.js", icon: "nextjs" },
+    { name: "TypeScript", icon: "typescript" },
+    { name: "Tailwind CSS", icon: "tailwind" },
+    { name: "Framer Motion", icon: "framer" },
+    { name: "HTML5", icon: "html" },
+    { name: "CSS3", icon: "css" },
+  ],
+  backend: [
+    { name: "Node.js", icon: "nodejs" },
+    { name: "Firebase", icon: "firebase" },
+    { name: "Supabase", icon: "supabase" },
+    { name: "REST APIs", icon: "api" },
+  ],
+  tools: [
+    { name: "Git & GitHub", icon: "git" },
+    { name: "VS Code", icon: "vscode" },
+    { name: "Vercel", icon: "vercel" },
+    { name: "Figma", icon: "figma" },
+  ],
+  learning: [
+    { name: "Python", icon: "python" },
+    { name: "PostgreSQL", icon: "postgresql" },
+    { name: "Docker", icon: "docker" },
+  ],
 };
 
 export const projectTypes = [
@@ -203,22 +241,16 @@ export const timelines = [
   { id: "6-months+", label: "6+ Months", description: "Long-term partnership" },
 ];
 
-// Update with Abdur Rehman's actual social links
 export const socialLinks = [
   {
     name: "GitHub",
-    url: "https://github.com/abdur-rehman",
+    url: "https://github.com/abdi2004574",
     icon: Github,
   },
   {
     name: "LinkedIn",
     url: "https://www.linkedin.com/in/abdur-rehman-64b429317/",
     icon: Linkedin,
-  },
-  {
-    name: "Twitter",
-    url: "https://twitter.com/abdur-rehman",
-    icon: Twitter,
   },
   {
     name: "Email",
@@ -229,8 +261,8 @@ export const socialLinks = [
 
 export const footerLinks = {
   services: [
-    { label: "Full-Stack Development", href: "#services" },
-    { label: "Backend Architecture", href: "#services" },
+    { label: "Frontend Development", href: "#services" },
+    { label: "Web App Architecture", href: "#services" },
     { label: "Performance Optimization", href: "#services" },
     { label: "API Integration", href: "#services" },
   ],

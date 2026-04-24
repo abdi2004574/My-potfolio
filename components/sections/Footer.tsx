@@ -5,7 +5,7 @@ import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { z } from "zod";
 import { motion } from "framer-motion";
-import { Github, Linkedin, Twitter, Mail, Send } from "lucide-react";
+import { Github, Linkedin, Mail, Send } from "lucide-react";
 import { Button } from "@/components/ui/Button";
 import { Input } from "@/components/ui/Input";
 import { socialLinks, footerLinks } from "@/lib/constants";
@@ -48,8 +48,7 @@ export function Footer() {
                 AR<span className="text-primary">.</span>
               </a>
               <p className="mt-4 max-w-md text-muted-foreground">
-                Full-Stack Developer specializing in MERN Stack and Laravel.
-                Building scalable web applications that drive digital growth.
+                Frontend Developer building scalable web applications.
               </p>
 
               <div className="mt-6 flex gap-4">

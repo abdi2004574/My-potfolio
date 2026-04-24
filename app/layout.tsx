@@ -5,33 +5,38 @@ import { Footer } from "@/components/sections/Footer";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "Abdur Rehman | Full-Stack Developer | MERN & Laravel Expert",
+  title: "Abdur Rehman | Frontend Developer | React & AI-Native Builder",
   description:
-    "Full-Stack Developer specializing in MERN Stack and Laravel. Building scalable web applications that drive digital growth. View portfolio and services.",
+    "First-year CE student building production-ready web apps. Specializing in React, Next.js, and AI-powered development. View portfolio, projects, and services.",
   keywords: [
-    "Full-Stack Developer",
-    "MERN Stack Expert",
-    "Laravel Developer",
+    "Frontend Developer",
     "React Developer",
-    "Node.js Developer",
+    "Next.js Developer",
+    "AI-Native Development",
+    "Vibe Coding",
     "Web Development",
     "Abdur Rehman",
+    "Frontend Developer Karachi",
+    "Freelance Web Developer",
   ],
   authors: [{ name: "Abdur Rehman" }],
+  icons: {
+    icon: "/favicon.svg",
+  },
   openGraph: {
-    title: "Abdur Rehman | Full-Stack Developer",
+    title: "Abdur Rehman | Frontend Developer & AI-Native Builder",
     description:
-      "Full-Stack Developer specializing in MERN Stack and Laravel. Building scalable web applications that drive digital growth.",
-    url: "https://abdur-rehman.dev",
+      "First-year CE student shipping production-ready apps. React, Next.js, and AI-powered development.",
+    url: "https://my-potfolio-8qui.vercel.app",
     siteName: "Abdur Rehman Portfolio",
     locale: "en_US",
     type: "website",
   },
- twitter: {
+  twitter: {
     card: "summary_large_image",
-    title: "Abdur Rehman | Full-Stack Developer",
+    title: "Abdur Rehman | Frontend Developer",
     description:
-      "Full-Stack Developer specializing in MERN Stack and Laravel.",
+      "First-year CE student building production-ready web apps with AI-native workflows.",
   },
   robots: {
     index: true,
